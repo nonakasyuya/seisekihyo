@@ -10,5 +10,19 @@
 <img src='./image/hissyu.png' alt="ゼミなどの基礎科目から、専門科目まで" class="hissyu">
 <img src='./image/kyoutu.png' alt="共通科目から、自由科目まで" class="kyoutu">
 <img src='./image/gpa.png' alt="GPA一覧" class="gpa">
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "1fa1bec9-bcce-4457-9755-64bf1459fbf7", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "229c9c68-e58b-4acf-a9b3-20a744bb842e", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
 </body>
 </html>
